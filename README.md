@@ -1,7 +1,7 @@
 # Export Soliguide data to lists
 
 ## Introduction
-This project's purpose, as its name state, is to allow to export Soliguide's data to lists.
+This project's purpose, as its name states, is to allow to export Soliguide's data to lists.
 
 These lists can have different format. They can be exported as CSV, as PDF... During the process, the data will be transformed to be readable by humans.
 
