@@ -11,7 +11,7 @@ The exports functions will go along with a visual input (a button) and a popup t
 
 ## Documentation
 
-Further informations [here](https://solinumasso.github.io/soliguide-liste-papier/).
+Further informations [here](https://solinumasso.github.io/soliguide-exports/).
 
 ## License
 [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/#AGPL)
