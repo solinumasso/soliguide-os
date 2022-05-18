@@ -8,4 +8,4 @@ The output of the export functions are files which formats are CSV, PDF...
 We are currently using Angular 11 for the frontend with Node 15 with Express for the backend and Mongo 4.6 for the database.
 
 ## Our flow
-The details are written [here](https://www.notion.so/solinum/Notre-workflow-268f5aa410c94cdb8b2e7facab283610). It's in french for the moment but it will be translated in English soon
+The details are written [here](https://solinum.notion.site/Notre-workflow-268f5aa410c94cdb8b2e7facab283610). It's in french for the moment but it will be translated in English soon
