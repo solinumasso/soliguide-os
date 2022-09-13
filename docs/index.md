@@ -28,7 +28,7 @@ For Soliguide development, we have specific needs caused by our business model a
 - [x] We should be able to deploy hotfixes and test features without interfering with each other.
 - [x] We should be able to deploy to production multiple features in a bulk while developing and testing other features.
 - [x] We should be able to review code easily before merging a feature.
-- [x] We should be able to add commentary to the code when it’s not clear enough.
+- [x] We should be able to add comments to the code when it’s not clear enough.
 
 # B. The workflow
 
@@ -43,7 +43,7 @@ On top of these 2 branches, there are other branches corresponding to issues and
 
 ⚠️ Bugs and hotfixes should absolutely be linked to issues. If a developer finds a bug s⋅he should create an issue and link its code and pull request (PR) to this issue.
 
-In the case where the developers work with a product owner who splits the big features in multiple parts, every part should have its own branch and go through the PR and review part.
+If the developers works on a big features split in multiple parts, every part should have its own branch and go through the PR and review stage.
 
 ## b) Merges et rebase
 
@@ -52,9 +52,9 @@ In the case where the developers work with a product owner who splits the big fe
 
 </aside>
 
-We can rebase FROM these branches, but never TO these. We’ll have conflicts from hell, delete local branches to pull remote ones, fiddle with git and the code and nobody wants that ^^’. These branch should only get code with merge and/or rebase→push. Don’t forget to use the command `git push --force` after a rebase.
+We can rebase FROM these branches, but never TO them. We’ll have conflicts from hell, delete local branches to pull remote ones, fiddle with git and the code and nobody wants that ^^’. These branch should only get code with merge and/or rebase→push. Don’t forget to use the command `git push --force` after a rebase.
 
-Every merge or rebase→push should be done after a PR on our [Github](https://github.com/solinumasso/soliguide) whoever produced the code.
+Every merge or rebase→push should be done after a PR on our [Github repository](https://github.com/solinumasso/soliguide) whoever produced the code.
 
 **master** : this branch should never be merged to another branch. It should only be the other way around, **develop** being merged to **master** and in EXTREME cases a hotfix branch.
 
@@ -62,19 +62,19 @@ Every merge or rebase→push should be done after a PR on our [Github](https://g
 
 The other branches should be rebased from the destination branch before being merged to it. If a feature needs to be split into multiple branches, all sub-branches should be rebased and push to the main branch, thus, there will be no merge commit and the git history should be cleaner.
 
-For the same reason, if you made a lot of testing commits, do not hesitate to squash those commit into one, so only the final version remains in master.
+For the same reason, if you made a lot of testing commits, do not hesitate to squash those commits into one, so only the final version remains in master.
 
 ## c) The environments
 
-The codebase should be deployed into the **prod** environment only by an admin on the repository. The deployment should be done manually after 8pm to avoid disturbing the operational staff during their work. Only the **master** branch should be deployed in production.
+The codebase should be deployed into the **prod** environment only by an admin of the repository. The deployment should be done manually after 8pm to avoid disturbing the operational staff during their work. Only the **master** branch should be deployed in production.
 
-The codebase should be deployed into the **preprod** to stabilize the **develop** branch before merging it to master. The deployment will be done manually for the moment.
+The codebase should be deployed into the **preprod** to stabilize the **develop** branch before merging it to master. The deployment will be done manually for now.
 
-The **test** environment will be used to test all the features branch when there is a need to be tested by other people than the developers. The deployment will be done manually for the moment.
+The **test** environment will be used by someone else than a developer to test one or more features branches. The deployment will be done manually for now.
 
 ## d) The commits
 
-The commits should be standardized according to the Convention Commits specifications.
+The commits should be standardized according to the [Convention Commits specifications](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ```xml
 <type>([optional scope])[optional !]: <description>[optional body][optional footer(s)]
@@ -86,8 +86,8 @@ The **type** can be one of the following :
 - **ci** : Modifies configuration files and scripts for the continuous integration.
 - **docs** : Modifies only the documentation.
 - **feat** : Updates to create a new feature.
-- **fix** : Fix a bug.
-- **perf** : Improve the product performances.
+- **fix** : Fixes a bug.
+- **perf** : Improves the product performances.
 - **refactor** : Improves the code quality without creating features or fixing a bug.
 - **style** : Updates to improve visual clarity of the code (space, formatting, missing semicolon, …)
 - **test** : Adds missing tests or improves the current ones.
@@ -127,7 +127,7 @@ Labels are automatically generated by _lerna_ when a branch is merged to **maste
 
 # Special contributions
 
-The **translation** is used with a specific tool : [BabelEdit](https://www.codeandweb.com/babeledit)
+The **translation** is done using a specific tool : [BabelEdit](https://www.codeandweb.com/babeledit)
 
 # Other
 
